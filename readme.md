@@ -2,8 +2,15 @@
 
 This repository contains the Matlab code and the resulting data for an adaptive sampling algorithm used in 2D Fourier-transform spectroscopy under high-noise conditions. It supplements our publication
 
-* S. Stadler et al. Arxiv 2026
+* S. Stadler et al., Adaptive Sampling in Fluorescence-Detected 2D Spectroscopy, Arxiv 2026
 
+A measured coefficient contributes its variance to the MSE, whereas a not-yet-measured coefficient contributes its absolute value squared. This helps to determine which coefficients should be measured, but an estimate of the unmeasured values is required.
+
+![Sketch Adaptive Sampling](fig_demo.png)
+
+We estimate the values that have not yet been measured using a simple exponential model. This produces an MSE (red) that closely resembles the ideal case (blue) when plotted against integration time.
+
+![MSE as function of integration time](fig_chi_over_N.png)
 
 ## Credit
 
